@@ -21,7 +21,7 @@ public class Main {
         System.out.println(Arrays.toString(employees));
         System.out.println(Employee.getId());
 
-        int sumOfSalaries = Arrays.stream(employees).mapToInt(employees::getSalary).reduce(0,Integer::sum);
+        //int sumOfSalaries = Arrays.stream(employees).mapToInt(employees::getSalary).reduce(0,Integer::sum);
 
         /*public static void listOfEmployees(){
 
