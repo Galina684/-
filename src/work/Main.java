@@ -1,3 +1,5 @@
+package work;
+
 import work.Employee;
 
 import java.util.Arrays;
@@ -12,7 +14,7 @@ public class Main {
         Employee[] employees = new Employee[10];
         employees[0] = ivanov;
         employees[1] = sidorov;
-        employees[2] = petrov;
+        employees[2] = petrov;0
         employees[3] = boshirov;
 
         employees[0].setSalary(55_000);
