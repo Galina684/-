@@ -42,11 +42,12 @@ public class Main {
                 System.out.println("Минимальная зарплата" + minSal);
         }
         public static void maxSalary(){
+        int[] salary = {}
           int maxSal = -1;
-            for (int i = 0; i < employees.length; i++) {
-            final int current = employees[i];
+          for (final int current : salary) {
             if (current > maxSal) {
-                maxSal = current;
+        maxSal = current;
+    }
             }
                 System.out.println("Максимальная зарплата" +maxSal);
         }
