@@ -13,13 +13,13 @@ static int id = 0;
         this.salary = salary;
         id++;
     }
-    public void departmentNumber(int newDepartment) {
+    /*public void departmentNumber(int newDepartment) {
         if (newDepartment >= 1 && newDepartment <= 5) {
             this.department = newDepartment;
         } else {
             throw new RuntimeException("Такого отдела не существует. Выберите от 1 до 5.");
         }
-    }
+    }*/
 
     @Override
     public String toString() {
