@@ -13,13 +13,7 @@ static int id = 0;
         this.salary = salary;
         id++;
     }
-    /*public void departmentNumber(int newDepartment) {
-        if (newDepartment >= 1 && newDepartment <= 5) {
-            this.department = newDepartment;
-        } else {
-            throw new RuntimeException("Такого отдела не существует. Выберите от 1 до 5.");
-        }
-    }*/
+
 
     @Override
     public String toString() {
@@ -44,8 +38,11 @@ static int id = 0;
         return salary;
     }
 
-    public void setDepartment(int department) {
-        this.department = department;
+    public void setDepartment ( int department) {
+        if (department < 1 || department > 5) {
+            throw new IllegalArgumentException("Такого отдела не существует. Выберите от 1 до 5.");
+        }
+        this.department= department;
     }
 
     public void setSalary(int salary) {
