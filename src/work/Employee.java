@@ -18,9 +18,9 @@ static int id = 0;
     @Override
     public String toString() {
         return "Employee{" +
-                "fullName='" + fullName + '\'' +
-                ", department=" + department +
-                ", salary=" + salary +
+                "Имя сотрудника='" + fullName + '\'' +
+                ", отдел=" + department +
+                ", зарплата=" + salary +
                 '}';
     }
 

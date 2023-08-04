@@ -19,16 +19,16 @@ public class Main {
     }
 
 
-    /*public static int minSalary(int[] employeesBook){
+   /* public static void minSalary(Employee[] employeesBook){
         int minSal = 0;
         for (Employee employees: employeesBook) {
             if (employees.getSalary() < minSal) {
                 minSal = employees.getSalary();
             }
             System.out.println("Минимальная зарплата " + minSal);
-            return minSal;
+
         }
-        public static int maxSalary(int[] employeesBook){
+        public static void maxSalary(Employee[] employeesBook){
             int maxSal = -1;
             for (Employee employees: employeesBook) {
                 if (employees.getSalary() > maxSal) {
@@ -36,13 +36,13 @@ public class Main {
                 }
             }
             System.out.println("Максимальная зарплата " +maxSal);
-            return maxSal;
-        }*/
+
+        }
 
         public static void employeeName(String[] employeesBook){
 
 
-        }
+        }*/
 
     public static void main(String[] args
     ) {
@@ -72,13 +72,13 @@ public class Main {
         employees[9] = turgenev;
 
         employees[0].setSalary(55_000);
-        employees[0].setDepartment(10);
+        employees[0].setDepartment(2);
 
         System.out.println(Arrays.toString(employees));
         System.out.println(Employee.getId());
 
             amountOfSalaries(employees);
-
+            //minSalary(employees);
     }
 
 }
