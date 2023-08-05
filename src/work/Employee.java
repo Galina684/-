@@ -1,30 +1,32 @@
 package work;
 
+import java.util.Objects;
+
 public class Employee {
- String fullName;
- int department;
- int salary;
-static int id = 0;
+    private Integer id;
+ private String fullName;
+ private Integer department;
+ private Integer salary;
+private static Integer idCounter = 1;
 
 
-    public Employee(String fullName, int department, int salary) {
+    public Employee(String fullName, Integer department, Integer salary) {
+        this.id = idCounter++;
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-        id++;
+
     }
 
 
     @Override
     public String toString() {
         return "Employee{" +
-                "Имя сотрудника='" + fullName + '\'' +
-                ", отдел=" + department +
-                ", зарплата=" + salary +
+                "fullName='" + fullName + '\'' +
+                ", department=" + department +
+                ", salary=" + salary +
                 '}';
     }
-
-
 
     public String getFullName() {
         return fullName;
@@ -49,9 +51,21 @@ static int id = 0;
         this.salary = salary;
     }
 
-    public static int getId() {
-        return id;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return department == employee.department && salary == employee.salary && Objects.equals(fullName, employee.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fullName, department, salary);
+    }
 }
 
