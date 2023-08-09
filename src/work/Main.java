@@ -22,8 +22,8 @@ public class Main {
 
 
     public static void printEmployees () {
-        for (Employee employee : employees) ;
-        System.out.println(employees);
+        for (Employee employee : employees) {
+        System.out.println(employee); }
     }
 
     public static int amountOfSalaries () {

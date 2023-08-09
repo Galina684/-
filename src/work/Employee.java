@@ -7,11 +7,12 @@ public class Employee {
  private String fullName;
  private Integer department;
  private Integer salary;
-private static Integer idCounter = 1;
+private static Integer idCounter = 0;
 
 
     public Employee(String fullName, Integer department, Integer salary) {
-        this.id = idCounter++;
+        idCounter++;
+        id = idCounter;
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
@@ -22,7 +23,8 @@ private static Integer idCounter = 1;
     @Override
     public String toString() {
         return "Employee{" +
-                "fullName='" + fullName + '\'' +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
                 ", department=" + department +
                 ", salary=" + salary +
                 '}';
@@ -40,11 +42,16 @@ private static Integer idCounter = 1;
         return salary;
     }
 
-    public void setDepartment ( int department) {
-        if (department < 1 || department > 5) {
-            throw new IllegalArgumentException("Такого отдела не существует. Выберите от 1 до 5.");
-        }
-        this.department= department;
+    public Integer getId() {
+        return id;
+    }
+
+    public static Integer getIdCounter() {
+        return idCounter;
+    }
+
+    public void setDepartment(Integer department) {
+        this.department = department;
     }
 
     public void setSalary(int salary) {
